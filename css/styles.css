@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap');
+
+/* base styles */
+
+:root {
+    --blue: #124E78;
+    --yellow: #F2BB05;
+    --red: #6E0E0A;
+    --light: #F0F0C9;
+    --orange: #D74E09;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+/* containers */
+
+body {
+    background-color: var(--orange);
+    font-family: 'Odibee Sans', cursive, sans-serif;
+}
+
+.container {
+    width: 90%;
+    max-width: 375px;
+    margin: 1em auto;
+}
+
+.header-content {
+    background-color: var(--blue);
+    text-align: center;
+    color: white;
+    padding: 15px;
+    border-radius: 10px 10px 0 0;
+}
+
+.main-content {
+    background-color: var(--light);
+    border-radius: 0 0 10px 10px;
+    padding: 1em;
+}
+
+.answer {
+    height: 100px;
+}
+
+/* form elements */
+
+label {
+    font-size: 1.5rem;
+}
+
+input, select {
+    margin-bottom: 1em;
+    margin-top: 1em;
+    padding: 1em;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.calculate-button {
+    text-align: center;
+    margin-top: 1em;
+}
+
+button {
+    color: white;
+    background-color: var(--red);
+    padding: 10px;
+    width: 70%;
+    border-radius: 10px;
+    font-size: 1.2rem;
+}
