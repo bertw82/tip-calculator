@@ -8,6 +8,7 @@
     --red: #6E0E0A;
     --light: #F0F0C9;
     --orange: #D74E09;
+    --green: rgb(1, 160, 160);
 }
 
 * {
@@ -65,16 +66,64 @@ input, select {
     border-radius: 5px;
 }
 
+.invalid-cost {
+   display: none;
+   color: red;
+   margin-bottom: .5em;
+}
+
+.invalid-people {
+    display: none;
+    color: red;
+    margin-bottom: .5em;
+ }
+
+ .invalid-percentage {
+    display: none;
+    color: red;
+    margin-bottom: .5em;
+ }
+
 .calculate-button {
     text-align: center;
     margin-top: 1em;
 }
 
-button {
+#submitBtn {
     color: white;
     background-color: var(--red);
     padding: 10px;
     width: 70%;
     border-radius: 10px;
     font-size: 1.2rem;
+}
+
+.clear-button {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#clear {
+    color: white;
+    background-color: var(--green);
+    padding: 10px;
+    width: 30%;
+    border-radius: 10px;
+    font-size: 1.2rem;
+}
+
+#answer {
+    text-align: center;
+    height: 110px;
+}
+
+.tip {
+    font-size: 2rem;
+    padding-top: 40px;
+}
+
+@media (min-width: 768px) {
+    .container {
+        margin-top: 2.5em;
+    }
 }
