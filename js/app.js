@@ -32,22 +32,25 @@ submitBtn.addEventListener('click', () => {
     let billAmount = ''; 
     let billPercentage = '';
     let peopleNum = '';
+    const invalidCost = document.querySelector('.invalid-cost');
+    const invalidPercentage = document.querySelector('.invalid-percentage');
+    const invalidPeople = document.querySelector('.invalid-people');
     if (!validateCost()) {
-        document.querySelector('.invalid-cost').style.display = 'block';
+        invalidCost.style.display = 'block';
     } else {
-        document.querySelector('.invalid-cost').style.display = 'none';
+        invalidCost.style.display = 'none';
         billAmount = bill.value;
     };
     if (percentage === ''){
-        document.querySelector('.invalid-percentage').style.display = 'block';
+        invalidPercentage.style.display = 'block';
     } else {
-        document.querySelector('.invalid-percentage').style.display = 'none';
+        invalidPercentage.style.display = 'none';
         billPercentage = percentage;
     };
     if (!validatePeople()){
-        document.querySelector('.invalid-people').style.display = 'block';
+        invalidPeople.style.display = 'block';
     } else {
-        document.querySelector('.invalid-people').style.display = 'none';
+        invalidPeople.style.display = 'none';
         peopleNum = people.value;
     };
     if (billAmount !== '' && billPercentage !== '' && peopleNum !== ''){
