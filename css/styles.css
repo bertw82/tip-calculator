@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans&display=swap');
 
 /* base styles */
 
@@ -18,14 +18,14 @@
 }
 
 h1 {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
 }
 
 /* containers */
 
 body {
     background-color: var(--orange);
-    font-family: 'Odibee Sans', cursive, sans-serif;
+    font-family: 'Merriweather Sans', sans-serif;
 }
 
 .container {
@@ -55,7 +55,7 @@ body {
 /* form elements */
 
 label {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 
 input, select {
@@ -64,6 +64,10 @@ input, select {
     padding: 1em;
     width: 100%;
     border-radius: 5px;
+}
+
+span {
+    font-size: 1rem;
 }
 
 .invalid-cost {
@@ -114,12 +118,15 @@ input, select {
 
 #answer {
     text-align: center;
-    height: 110px;
+    height: 90px;
+    margin: 20px 10px;
+    background: lightgrey;
+    border-radius: 5px;
 }
 
 .tip {
-    font-size: 2rem;
-    padding-top: 40px;
+    font-size: 1.5rem;
+    padding: 13px 40px;
 }
 
 @media (min-width: 768px) {
