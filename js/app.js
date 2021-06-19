@@ -1,11 +1,15 @@
 "use strict";
 
+// global variables
 const submitBtn = document.querySelector('#submitBtn');
 const bill = document.querySelector('#bill');
 const people = document.querySelector('#people');
 const selectMenu = document.querySelector('#service');
 const answerDiv = document.querySelector('#answer');
 const clearBtn = document.querySelector('#clear');
+const invalidCost = document.querySelector('.invalid-cost');
+const invalidPercentage = document.querySelector('.invalid-percentage');
+const invalidPeople = document.querySelector('.invalid-people');
 let percentage = '';
 
 // helper functions
@@ -28,9 +32,6 @@ selectMenu.addEventListener('change', e => {
 });
 
 submitBtn.addEventListener('click', () => {
-    const invalidCost = document.querySelector('.invalid-cost');
-    const invalidPercentage = document.querySelector('.invalid-percentage');
-    const invalidPeople = document.querySelector('.invalid-people');
     if (!validateCost()) {
         invalidCost.style.display = 'block';
     } else {
@@ -46,7 +47,7 @@ submitBtn.addEventListener('click', () => {
     } else {
         invalidPeople.style.display = 'none';
     };
-    if (bill.value !== '' && percentage !== '' && people.value !== ''){
+    if (validateCost() && percentage !== '' && validatePeople()){
         const tip = ((bill.value * percentage) / people.value).toFixed(2);
         if (parseInt(people.value) === 1) {
             answerDiv.innerHTML = `<h2 class="tip">Your tip will be: $${tip}`;
@@ -62,4 +63,7 @@ clearBtn.addEventListener('click', () => {
     people.value = '';
     percentage = '';
     answerDiv.innerHTML = '';
+    invalidCost.style.display = 'none';
+    invalidPercentage.style.display = 'none';
+    invalidPeople.style.display = 'none';
 });
